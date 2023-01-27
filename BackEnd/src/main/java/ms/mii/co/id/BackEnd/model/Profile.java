@@ -20,6 +20,7 @@ import javax.persistence.PrimaryKeyJoinColumn;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ms.mii.co.id.BackEnd.model.BaseEntity.BaseEntity;
 
 /**
  *
@@ -29,11 +30,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Entity
-public class Profile {
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Profile extends BaseEntity {
     
     @Column(unique = true)
     private Long nik;

@@ -18,6 +18,7 @@ import javax.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ms.mii.co.id.BackEnd.model.BaseEntity.BaseEntity;
 
 /**
  *
@@ -27,11 +28,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Type {
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Type extends BaseEntity{
     
     @Column(nullable = false)
     private String name;

@@ -17,6 +17,7 @@ import javax.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ms.mii.co.id.BackEnd.model.BaseEntity.BaseEntity;
 
 /**
  *
@@ -26,11 +27,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Brand {
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Brand extends BaseEntity {
     
     @Column(nullable = false)
     private String name;

@@ -13,11 +13,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ms.mii.co.id.BackEnd.model.BaseEntity.BaseEntity;
 
 /**
  *
@@ -27,10 +29,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Entity
-public class Car {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Car extends BaseEntity{
     
     @Column(nullable = false)
     private String name;
@@ -42,6 +41,7 @@ public class Car {
     private String plat;
     
     @Column(nullable = false)
+    @Lob
     private String image;
     
     @ManyToOne
