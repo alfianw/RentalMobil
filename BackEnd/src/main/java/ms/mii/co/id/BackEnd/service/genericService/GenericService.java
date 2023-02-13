@@ -27,7 +27,7 @@ public class GenericService <T extends BaseEntity> {
         return genericRepository.findAll();
     }
     
-    public T getById(Long id){
+    public T findById(Long id){
         return genericRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Data not found!"));
     }
@@ -40,6 +40,7 @@ public class GenericService <T extends BaseEntity> {
          if(!genericRepository.findById(id).isPresent()){
          throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Data not Found");
     }
+        entity.setId(id);
          return genericRepository.save(entity);
     }
     

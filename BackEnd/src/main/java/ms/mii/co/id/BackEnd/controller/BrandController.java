@@ -6,7 +6,7 @@
 package ms.mii.co.id.BackEnd.controller;
 
 import ms.mii.co.id.BackEnd.controller.genericController.GenericController;
-import ms.mii.co.id.BackEnd.model.User;
+import ms.mii.co.id.BackEnd.model.Brand;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * @author alfia
  */
-@RequestMapping("/user")
+@RequestMapping("/brand")
 @RestController
-public class UserController extends GenericController<User>{
+public class BrandController extends GenericController<Brand>{
     
 }

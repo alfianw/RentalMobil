@@ -36,7 +36,7 @@ public class GenericController<T extends BaseEntity>{
 
     @GetMapping("/{id}")
     public ResponseEntity<T> findById(@PathVariable("id") Long id) {
-        return new ResponseEntity(serviceGeneric.getById(id), HttpStatus.OK);
+        return new ResponseEntity(serviceGeneric.findById(id), HttpStatus.OK);
     }
     
     @PostMapping
@@ -44,7 +44,7 @@ public class GenericController<T extends BaseEntity>{
         return new ResponseEntity(serviceGeneric.create(entity), HttpStatus.CREATED);
     }
     @PutMapping("/{id}")
-    public ResponseEntity<T> update(@PathVariable("id")Long id, T entity) {
+    public ResponseEntity<T> update(@PathVariable("id")Long id,@RequestBody T entity) {
         return new ResponseEntity(serviceGeneric.update(id, entity),HttpStatus.CREATED);
     }
 

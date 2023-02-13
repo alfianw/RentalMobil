@@ -40,7 +40,6 @@ public class Car extends BaseEntity{
     @Column(nullable = false)
     private String plat;
     
-    @Column(nullable = false)
     @Lob
     private String image;
     
